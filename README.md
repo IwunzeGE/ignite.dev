@@ -4,9 +4,32 @@
 
 Setup a kubernetes cluster using kind
 
+1. Install kind 
+
+```
+[ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.20.0/kind-linux-amd64
+
+chmod +x ./kind
+
+sudo mv ./kind /usr/local/bin/kind
+```
+
+![Alt text](images/image.png)
+
+2. Install Docker Engine
+[Install](https://docs.docker.com/engine/install/ubuntu/)
+
+3. Install kubectl
+[Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+
 Write a simple bash script that deploys a kind cluster locally
 
+1. Create bash script and deploy it
+
+![Alt text](images/image1.png)
+
 Download the kubeconfig for the cluster and store in a safe place, we will use it much later in the next steps
+
 
 ## Deploy a sample Node.js app using terraform
 
