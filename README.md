@@ -30,12 +30,21 @@ Write a simple bash script that deploys a kind cluster locally
 
 Download the kubeconfig for the cluster and store in a safe place, we will use it much later in the next steps
 
+`kubectl config view --minify --raw > kubeconfig.yml`
 
 ## Deploy a sample Node.js app using terraform
 
 When kind is up and running, dockerize a simple hello world express and deploy to dockerhub
 
-create a kubernetes deployment manifest to deploy to deploy the Node.js to the kind cluste but don't apply it yet
+![Alt text](images/image2.png)
+
+![Alt text](images/image3.png)
+
+![Alt text](images/image4.png)
+
+![Alt text](images/image5.png)
+
+create a kubernetes deployment manifest to deploy to deploy the Node.js to the kind cluster but don't apply it yet
 
 using the kubectl terraform provider, write a terraform code to deploy the kubectl manifest to the kind cluster
 
