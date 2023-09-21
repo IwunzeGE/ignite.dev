@@ -1,7 +1,25 @@
-provider "kubectl" {
-  config_path = "~/.kube/config"
+terraform {
+  required_providers {
+    docker = {
+      source  = "kreuzwerker/docker"
+      version = "~> 3.0.1"
+    }
+  }
 }
 
-resource "kubectl_manifest" "node_app" {
-  manifest_path = "ignite.dev/codes/express-deployment.yml"  # Path to your manifest file
+provider "docker" {}
+
+resource "docker_image" "express" {
+  name         = "rockchip/node:v1"
+  keep_locally = false
+}
+
+resource "docker_container" "express_app" {
+  image = docker_image.express.image_id
+  name  = "express_app"
+
+  ports {
+    internal = 3000
+    external = 3000
+  }
 }
