@@ -48,9 +48,11 @@ When kind is up and running, dockerize a simple hello world express and deploy t
 
 ![Alt text](images/image6.png)
 
-create a kubernetes deployment manifest to deploy to deploy the Node.js to the kind cluster but don't apply it yet
+- create a kubernetes deployment manifest to deploy to deploy the Node.js to the kind cluster but don't apply it yet
 
-using the kubectl terraform provider, write a terraform code to deploy the kubectl manifest to the kind cluster
+- Using the kubectl terraform provider, write a terraform code to deploy the kubectl manifest to the kind cluster
+
+![Alt text](images/image7.png)
 
 ## Bonus
 
