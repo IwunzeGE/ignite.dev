@@ -54,6 +54,8 @@ When kind is up and running, dockerize a simple hello world express and deploy t
 
 ![Alt text](images/image7.png)
 
+![Alt text](images/image8.png)
+
 ## Bonus
 
 Using the kube-prometheus stack, using terraform helm provider, setup monitoring and observability for the prometheus cluster.
